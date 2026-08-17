@@ -3,14 +3,40 @@
 <head>
   <style>
     body {
-      background-image: url('assets/purple.png');
+        margin: 50px auto;
+        position: center;
+        width: 800px;
+        background-image: url('assets/purple.png');
+        display: grid;
+        grid-gap: .25em;
+        grid-template-columns: 12em 1fr;
+        grid-template-areas:
+            'banner banner'
+            'nav main'
+        ;
+        }
+    header {
+        grid-area: banner;
+        text-align: center;
+        background-color: rgba(255,255,255,0.2);
+
     }
 
-    #header {
-      width: 650px;
-      padding-left: 150px;
-      margin: 40px auto 50px;
-      background-size: auto 100%
+    nav {
+        grid-area: nav;
+        background-color: rgba(255,255,255,0.2);
+    }
+
+    main {
+        grid-area: main;
+        background-color: rgba(255,255,255,0.2);
+        padding-left: 1em;
+
+    }
+
+    .sidebar_list {
+        list-style-type: none;
+        margin-left: -.75em;
     }
 
     .site-description, .title, .nav {
@@ -19,12 +45,25 @@
   </style>
 </head>
 
-<body>
-  <header id="header">
-    <h1>
-      <a class="title" href="https://maango.biz">maango.biz official web site</a>
-    </h1>
-  </header>
-</body>
+
+    <body>
+        <header class="header">
+        <h1>
+            <a class="title" href="https://maango.biz">maango.biz official web site</a>
+        </h1>
+        </header>
+        <nav>
+            <ul class="sidebar_list">
+            <li><a href="https://x.com/maangodotbiz">Twitter</a></li>
+            <li><a href="https://letterboxd.com/maangodotbiz"/>Letterboxd</a></li>
+            <li><a href="https://maango.bearblog.dev/">Blog</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Sorry for the construction</h2>
+            <p>Listen its not what I want either.</p>
+        </main>
+    </body>
+
 
 </html>
